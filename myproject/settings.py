@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
-import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,10 +26,10 @@ SECRET_KEY = "django-insecure-keo854zatj&e%t1%nfyq+v&zxssm#mm*t#tmxl^l&h2)$y!08#
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG=True shows detailed error pages; set to False in production
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS: List of hosts/domains that Django will serve. Empty list allows all in development
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -143,8 +142,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 # STATIC_URL: URL to access static files in the browser (e.g., /static/)
 STATIC_URL = "static/"
-
-# STATICFILES_DIRS: List of directories where collectstatic looks for static files
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 MEDIA_URL = "media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+STATIC_ROOT = BASE_DIR / "assests"
+MEDIA_ROOT = BASE_DIR / "media"
+# STATICFILES_DIRS: List of directories where collectstatic looks for static files
+STATICFILES_DIRS = [BASE_DIR, "static"]
