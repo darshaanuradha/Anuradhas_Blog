@@ -29,13 +29,12 @@ SECRET_KEY = "django-insecure-keo854zatj&e%t1%nfyq+v&zxssm#mm*t#tmxl^l&h2)$y!08#
 DEBUG = False
 
 # ALLOWED_HOSTS: List of hosts/domains that Django will serve. Empty list allows all in development
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["http://168.144.39.187/", "localhost", "127.0.0.1"]
 
 
 # Application definition
 # INSTALLED_APPS: List of all Django apps and third-party apps used in this project
 INSTALLED_APPS = [
-    "debug_toolbar",
     "django.contrib.admin",  # Admin interface
     "django.contrib.auth",  # User authentication system
     "django.contrib.contenttypes",  # Content type framework
