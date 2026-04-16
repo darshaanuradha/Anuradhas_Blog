@@ -22,7 +22,6 @@ from . import settings
 from . import views
 
 urlpatterns = [
-    path("__reload__/", include("django_browser_reload.urls")),
     path("admin/", admin.site.urls),
     path("", views.home, name="home"),
     path("about/", views.about, name="about"),
@@ -30,9 +29,5 @@ urlpatterns = [
     path("users/", include("users.urls")),
     path("posts/", include("posts.urls")),
 ]
-if settings.DEBUG:
-    urlpatterns += [
-        path("__debug__/", include("debug_toolbar.urls")),
-    ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
