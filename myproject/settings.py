@@ -54,7 +54,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",  # Associates users with requests
     "django.contrib.messages.middleware.MessageMiddleware",  # Manages messages
     "django.middleware.clickjacking.XFrameOptionsMiddleware",  # Clickjacking protection
-    "django_browser_reload.middleware.BrowserReloadMiddleware",  # Live browser reloading
 ]
 
 # ROOT_URLCONF: Python path to the root URL configuration module
@@ -141,4 +140,4 @@ MEDIA_URL = "media/"
 STATIC_ROOT = BASE_DIR / "assests"
 MEDIA_ROOT = BASE_DIR / "media"
 # STATICFILES_DIRS: List of directories where collectstatic looks for static files
-STATICFILES_DIRS = [BASE_DIR, "static"]
+STATICFILES_DIRS = [BASE_DIR / "static"]
